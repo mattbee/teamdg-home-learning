@@ -1,0 +1,39 @@
+require: rubocop-rails
+
+Style/ClassAndModuleChildren:
+    Enabled: false
+
+Layout/LineLength:
+    Exclude:
+        - 'Gemfile'
+        - 'config/environments/*'
+        - 'config/initializers/content_security_policy.rb'
+    Max: 80
+
+Layout/SpaceInsideArrayLiteralBrackets:
+    Exclude:
+        - 'config/environments/*'
+
+Rails/FilePath:
+    Enabled: false
+
+Style/Documentation:
+    Enabled: false
+
+Style/FrozenStringLiteralComment:
+    Enabled: false
+
+Style/StringLiterals:
+    Enabled: false
+
+Style/SymbolArray:
+    Enabled: false
+
+Style/HashEachMethods:
+    Enabled: false
+
+Style/HashTransformKeys:
+    Enabled: false
+
+Style/HashTransformValues:
+    Enabled: false
