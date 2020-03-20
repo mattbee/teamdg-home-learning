@@ -18,6 +18,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'dotenv-rails'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
