@@ -15,6 +15,7 @@ test:
   <<: *default
   username: <%= ENV['POSTGRES_TEST_USER'] %>
   database: <%= ENV['POSTGRES_TEST_DB'] %>
+  password: <%= ENV['POSTGRES_TEST_PASSWORD'] %>
 
 production:
   <<: *default
