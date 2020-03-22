@@ -6,11 +6,16 @@ Style/BlockComments:
 Style/ClassAndModuleChildren:
     Enabled: false
 
+Style/EmptyMethod:
+    Enabled: false
+
 Layout/LineLength:
     Exclude:
         - 'Gemfile'
         - 'config/environments/*'
         - 'config/initializers/content_security_policy.rb'
+        - 'config/initializers/devise.rb'
+        - 'db/migrate/*'
     Max: 80
 
 Layout/SpaceInsideArrayLiteralBrackets:
