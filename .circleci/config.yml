@@ -54,6 +54,7 @@ jobs:
       - run:
           name: Run rspec in parallel
           command: |
+            bin/webpack &&
             bundle exec rspec --profile 10 \
                              --format RspecJunitFormatter \
                              --out /tmp/test-results/rspec.xml \
