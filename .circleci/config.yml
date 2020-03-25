@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/app
     docker:
-      - image: circleci/ruby:2.6.2
+      - image: circleci/ruby:2.6.2-node
         environment:
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
