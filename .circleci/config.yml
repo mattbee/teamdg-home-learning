@@ -81,7 +81,7 @@ jobs:
     deploy:
       machine:
         enabled: true
-      working_directory: ~/circleci-demo-workflows
+      working_directory: ~/app
       environment:
         HEROKU_APP: "secret-sea-00303" # define env var $HEROKU_APP
       steps:
