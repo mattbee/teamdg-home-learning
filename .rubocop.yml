@@ -16,6 +16,7 @@ Layout/LineLength:
         - 'config/initializers/content_security_policy.rb'
         - 'config/initializers/devise.rb'
         - 'db/migrate/*'
+        - 'spec/*/*'
     Max: 80
 
 Layout/SpaceInsideArrayLiteralBrackets:
