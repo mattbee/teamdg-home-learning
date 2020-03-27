@@ -78,24 +78,24 @@ jobs:
       # Save artifacts
       - store_test_results:
           path: /tmp/test-results
-    deploy:
-      machine:
-        enabled: true
-      working_directory: ~/app
-      environment:
-        HEROKU_APP: "secret-sea-00303" # define env var $HEROKU_APP
-      steps:
-        - checkout
-        - run:
-            name: Setup Heroku
-            command: bash .circleci/setup-heroku.sh # run a script to set up Heroku
+  deploy:
+    machine:
+      enabled: true
+    working_directory: ~/app
+    environment:
+      HEROKU_APP: "secret-sea-00303" # define env var $HEROKU_APP
+    steps:
+      - checkout
+      - run:
+          name: Setup Heroku
+          command: bash .circleci/setup-heroku.sh # run a script to set up Heroku
 
-        - run:
-            command: |
-                git push heroku master
-                heroku run rake db:migrate
-                sleep 5 # sleep for 5 seconds to wait for dynos
-                heroku restart
+      - run:
+          command: |
+              git push heroku master
+              heroku run rake db:migrate
+              sleep 5 # sleep for 5 seconds to wait for dynos
+              heroku restart
 
 workflows:
     version: 2
